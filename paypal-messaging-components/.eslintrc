@@ -1,0 +1,26 @@
+{
+    "extends": ["airbnb-base", "prettier"],
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true
+    },
+    "globals": {
+        "__MESSAGES__": true
+    },
+    "plugins": ["prettier"],
+    "rules": {
+        "prettier/prettier": "error",
+        "no-underscore-dangle": "off",
+        "import/no-extraneous-dependencies": [
+            "error",
+            { "devDependencies": ["/*.js", "/utils/**/*.js", "/tools/**/*.js", "/tests/**/*.js"] }
+        ]
+    },
+    "settings": {
+        "import/resolver": {
+            "jest": {
+                "jestConfigFile": "./jest.config.js"
+            }
+        }
+    }
+}
